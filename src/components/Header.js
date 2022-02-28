@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <nav>
-      <h1>Brass Knuckles</h1>
+      <Link to='/'>
+        <h1>Brass Knuckles</h1>
+      </Link>
       <div className='nav-buttons'>
         <button>
           <Link to='/about'>About</Link>

@@ -1,8 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import About from './pages/About';
 import Home from './pages/Home';
+import About from './pages/About';
+import Members from './pages/Members';
+import Schedule from './pages/Schedule';
+import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
+
 import Header from './components/Header';
 
 function App() {
@@ -13,10 +18,10 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/members' element={<About />} />
-          <Route path='/schedule' element={<About />} />
-          <Route path='/gallery' element={<About />} />
-          <Route path='/contact' element={<About />} />
+          <Route path='/members' element={<Members />} />
+          <Route path='/schedule' element={<Schedule />} />
+          <Route path='/gallery' element={<Gallery />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
       </main>
     </Router>
