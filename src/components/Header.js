@@ -15,7 +15,7 @@ function Header() {
           <Link to='/members'>Members</Link>
         </button>
         <button>
-          <Link to='/about'>Schedule</Link>
+          <Link to='/schedule'>Schedule</Link>
         </button>
         <button>
           <Link to='/gallery'>Gallery</Link>

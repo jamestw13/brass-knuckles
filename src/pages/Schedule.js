@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function About() {
+function Schedule() {
   return (
     <section>
-      <h2>About</h2>
-      <p>Information about Brass Knuckles</p>
-      <Link to='/members'>About our members</Link>
+      <h2>Schedule</h2>
+      <p>Where we'll be and where we've been</p>
+      <p>A list of performances</p>
     </section>
   );
 }
 
-export default About;
+export default Schedule;

@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function About() {
+function Contact() {
   return (
     <section>
-      <h2>About</h2>
-      <p>Information about Brass Knuckles</p>
-      <Link to='/members'>About our members</Link>
+      <h2>Contact</h2>
+      <p>Links to Social media and email</p>
     </section>
   );
 }
 
-export default About;
+export default Contact;
