@@ -1,8 +1,46 @@
-$primary-color: #00eeff;
+$red: #d90416;
+$maroon: #59071d;
+$light-blue: #1db6f2;
+$yellow: #f29422;
+$orange: #f26716;
+
+body {
+  background-color: $light-blue;
+}
 
 nav {
   display: flex;
-  background-color: $primary-color;
+  background-color: $maroon;
+  color: $light-blue;
   justify-content: space-between;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 1rem;
+  color: $light-blue;
+}
+
+button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+
+  margin: 0.5rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: $orange;
+  color: $maroon;
+}
+
+main {
+  width: clamp(150px, 80%, 1000px);
+  margin: auto;
+  background-color: $yellow;
+  height: 100vh;
+  padding: 1rem;
 }

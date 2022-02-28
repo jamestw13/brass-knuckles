@@ -1,13 +1,46 @@
+body {
+  background-color: #1db6f2;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #00eeff;
+  background-color: #59071d;
+  color: #1db6f2;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 1rem;
+  color: #1db6f2;
+}
+
+button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: #f26716;
+  color: #59071d;
+}
+
+main {
+  width: clamp(150px, 80%, 1000px);
+  margin: auto;
+  background-color: #f29422;
+  height: 100vh;
+  padding: 1rem;
 }
 /*# sourceMappingURL=App.css.map */
