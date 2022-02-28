@@ -20,9 +20,15 @@ a {
   text-decoration: none;
 }
 
+.logo {
+  padding: 1rem;
+  width: 50%;
+  fill: #1db6f2;
+}
+
 h1 {
-  margin: 1rem;
-  color: #1db6f2;
+  margin: 0.5rem;
+  color: #f26716;
 }
 
 button {

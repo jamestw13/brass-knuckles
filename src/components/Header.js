@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import LogoSVG from './LogoSVG';
+
 function Header() {
   return (
     <nav>
       <Link to='/'>
-        <h1>Brass Knuckles</h1>
+        {/* <h1> */}
+        <LogoSVG />
+        {/* Brass Knuckles */}
+        {/* </h1> */}
       </Link>
       <div className='nav-buttons'>
         <button>
