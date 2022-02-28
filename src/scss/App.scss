@@ -1,0 +1,8 @@
+$primary-color: #00eeff;
+
+nav {
+  display: flex;
+  background-color: $primary-color;
+  justify-content: space-between;
+  align-items: center;
+}
