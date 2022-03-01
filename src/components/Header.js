@@ -7,10 +7,7 @@ function Header() {
   return (
     <nav>
       <Link to='/'>
-        {/* <h1> */}
         <LogoSVG />
-        {/* Brass Knuckles */}
-        {/* </h1> */}
       </Link>
       <div className='nav-buttons'>
         <button>

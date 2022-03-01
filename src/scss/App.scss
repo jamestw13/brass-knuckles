@@ -4,6 +4,10 @@ $light-blue: #1db6f2;
 $yellow: #f29422;
 $orange: #f26716;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $light-blue;
 }
@@ -47,6 +51,26 @@ main {
   width: clamp(150px, 80%, 1000px);
   margin: auto;
   background-color: $yellow;
-  height: 100vh;
+
   padding: 1rem;
+}
+
+.gallery-box {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: space-around;
+}
+
+.image-container {
+  margin: 0.25rem;
+  padding: 0.25rem;
+  background-color: $maroon;
+  width: 30%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  object-position: center;
 }
