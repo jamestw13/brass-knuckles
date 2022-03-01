@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 function Image({ image, index }) {
   const { id, description } = image;

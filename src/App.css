@@ -71,8 +71,8 @@ main {
   padding: 0.25rem;
   background-color: #59071d;
   width: 30%;
-  -webkit-transition: 2s ease;
-  transition: 2s ease;
+  -webkit-transition: width 2s ease;
+  transition: width 2s ease;
 }
 
 .image-container:hover {
@@ -88,8 +88,9 @@ main {
      object-position: center;
 }
 
-.image:hover {
-  -o-object-position: top;
-     object-position: top;
+.event-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=App.css.map */
