@@ -71,6 +71,12 @@ main {
   padding: 0.25rem;
   background-color: #59071d;
   width: 30%;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
+}
+
+.image-container:hover {
+  width: 100%;
 }
 
 .image {
@@ -80,5 +86,10 @@ main {
      object-fit: none;
   -o-object-position: center;
      object-position: center;
+}
+
+.image:hover {
+  -o-object-position: top;
+     object-position: top;
 }
 /*# sourceMappingURL=App.css.map */
