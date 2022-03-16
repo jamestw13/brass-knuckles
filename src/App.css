@@ -76,7 +76,7 @@ main {
   transition: width 2s ease;
 }
 
-.image-container:hover {
+.image-container:focus {
   width: 100%;
 }
 

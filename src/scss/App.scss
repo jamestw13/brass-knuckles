@@ -66,7 +66,7 @@ main {
   padding: 0.25rem;
   background-color: $maroon;
   width: 30%;
-  &:hover {
+  &:focus {
     width: 100%;
   }
   transition: width 2s ease;
