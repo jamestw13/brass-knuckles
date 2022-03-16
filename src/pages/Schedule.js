@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 // 17aCoIcb2RlGMCmlN4uvUiarDWdWJa4aFqh_IZ6ZhmME
 
 function formatDate(dateString) {
-  return `${dayjs(dateString)}`;
+  return `${dayjs(dateString).format('MMMM D')}`;
 }
 
 function Schedule() {
@@ -74,13 +74,13 @@ function Schedule() {
 
       {scheduleData ? (
         scheduleData.map((show, index) => {
-          const { date, event, location } = show;
+          const { date, event, city, location } = show;
           return (
             <div className='event-row' key={index}>
               <p>{formatDate(date)}</p>
               <p>{event}</p>
+              <p>{city}</p>
               <p>{location}</p>
-              {/* <p>{event.city}</p> */}
             </div>
           );
         })
