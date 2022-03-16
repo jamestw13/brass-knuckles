@@ -23,51 +23,6 @@ function Schedule() {
       .then(data => setScheduleData(data));
   }, []);
 
-  //   [
-  //   {
-  //     date: '4-16',
-  //     event: 'Easter Vigil',
-  //     location: 'St. Patrick Church',
-  //     city: 'Madison, WI',
-  //   },
-  //   {
-  //     date: '4-17',
-  //     event: 'Easter',
-  //     location: 'St. Patrick Church',
-  //     city: 'Madison, WI',
-  //   },
-  //   {
-  //     date: '5-27',
-  //     event: 'Concert',
-  //     location: 'Oakwood West PAC',
-  //     city: 'Madison, WI',
-  //   },
-  //   {
-  //     date: '7-20',
-  //     event: 'Concert in the Park',
-  //     location: 'Central Park',
-  //     city: 'Edgerton, WI',
-  //   },
-  //   {
-  //     date: '7-22',
-  //     event: 'Concert',
-  //     location: 'Oakwood West Courtyard',
-  //     city: 'Madison, WI',
-  //   },
-  //   {
-  //     date: '7-27',
-  //     event: 'Concert in the Park - Rain date',
-  //     location: 'Central Park',
-  //     city: 'Edgerton, WI',
-  //   },
-  //   {
-  //     date: '7-29',
-  //     event: 'Concert',
-  //     location: 'Oakwood East',
-  //     city: 'Madison, WI',
-  //   },
-  // ]
-
   return (
     <section>
       <h2>Schedule</h2>
