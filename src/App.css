@@ -51,6 +51,7 @@ main {
   width: clamp(150px, 80%, 1000px);
   margin: auto;
   background-color: #f29422;
+  min-height: 88vh;
   padding: 1rem;
 }
 
@@ -89,8 +90,9 @@ main {
 }
 
 .event-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 /*# sourceMappingURL=App.css.map */

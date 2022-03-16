@@ -51,7 +51,7 @@ main {
   width: clamp(150px, 80%, 1000px);
   margin: auto;
   background-color: $yellow;
-
+  min-height: 88vh;
   padding: 1rem;
 }
 
@@ -82,5 +82,6 @@ main {
 // SCHEDULE
 
 .event-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
