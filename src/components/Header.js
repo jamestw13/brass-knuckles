@@ -11,6 +11,9 @@ function Header() {
       </Link>
       <div className='nav-buttons'>
         <button>
+          <Link to='/'>Home</Link>
+        </button>
+        <button>
           <Link to='about'>About</Link>
         </button>
         <button>

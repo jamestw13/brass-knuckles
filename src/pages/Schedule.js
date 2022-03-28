@@ -12,7 +12,7 @@ function formatDate(dateString) {
 function Schedule({ scheduleData }) {
   return (
     <section>
-      <h2>Schedule</h2>
+      <h2>{dayjs().year()} Schedule</h2>
 
       {scheduleData ? (
         scheduleData.map((show, index) => {

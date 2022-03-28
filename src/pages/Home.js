@@ -24,9 +24,8 @@ function Home({ scheduleData }) {
 
   return (
     <>
-      <p>Section with an overview, pictures, mini schedule</p>
       <h1>Brass Knuckles Quintet and Percussion</h1>
-      <div style={{ display: 'flex' }}>
+      <section style={{ display: 'flex' }}>
         <div>
           <p>
             Brass Knuckles is a five to six piece brass ensemble proudly
@@ -41,8 +40,9 @@ function Home({ scheduleData }) {
           </p>
         </div>
         <div>photos</div>
-      </div>
-      <div>
+      </section>
+
+      <section>
         <h3>Next shows</h3>
         {scheduleData ? (
           upcomingSchedule.map((show, index) => {
@@ -61,7 +61,8 @@ function Home({ scheduleData }) {
         ) : (
           <h1>Loading</h1>
         )}
-      </div>
+        <Link to='schedule'>See details and more dates</Link>
+      </section>
     </>
   );
 }
