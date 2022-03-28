@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/brass-knuckles/static/css/main.065605b0.css",
-    "main.js": "/brass-knuckles/static/js/main.13b196eb.js",
+    "main.js": "/brass-knuckles/static/js/main.7dfb35c8.js",
     "static/media/125.jpg": "/brass-knuckles/static/media/125.dd5a0836d5fa32e0f9e9.jpg",
     "static/media/130.jpg": "/brass-knuckles/static/media/130.b56ae1ac4ae54380e8c6.jpg",
     "static/media/129.jpg": "/brass-knuckles/static/media/129.0f430739dd633f7e77d6.jpg",
@@ -134,10 +134,10 @@
     "static/media/84.jpg": "/brass-knuckles/static/media/84.7fb3bf1fa75f5ac4c01d.jpg",
     "index.html": "/brass-knuckles/index.html",
     "main.065605b0.css.map": "/brass-knuckles/static/css/main.065605b0.css.map",
-    "main.13b196eb.js.map": "/brass-knuckles/static/js/main.13b196eb.js.map"
+    "main.7dfb35c8.js.map": "/brass-knuckles/static/js/main.7dfb35c8.js.map"
   },
   "entrypoints": [
     "static/css/main.065605b0.css",
-    "static/js/main.13b196eb.js"
+    "static/js/main.7dfb35c8.js"
   ]
 }
