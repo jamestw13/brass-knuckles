@@ -22,6 +22,7 @@ nav {
 
 a {
   text-decoration: none;
+  color: $maroon;
 }
 
 .logo {
@@ -32,7 +33,7 @@ a {
 
 h1 {
   margin: 0.5rem;
-  color: $orange;
+  color: $red;
 }
 
 button {
@@ -54,6 +55,27 @@ main {
   min-height: 88vh;
   padding: 1rem;
 }
+
+// HOME
+
+// ABOUT
+
+// MEMBERS
+.member {
+  display: flex;
+}
+
+// SCHEDULE
+.event-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.member-image {
+  width: 100px;
+}
+
+// GALLERY
 
 .gallery-box {
   display: flex;
@@ -77,11 +99,4 @@ main {
   height: 100%;
   object-fit: none;
   object-position: center;
-}
-
-// SCHEDULE
-
-.event-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
 }

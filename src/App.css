@@ -23,6 +23,7 @@ nav {
 
 a {
   text-decoration: none;
+  color: #59071d;
 }
 
 .logo {
@@ -33,7 +34,7 @@ a {
 
 h1 {
   margin: 0.5rem;
-  color: #f26716;
+  color: #d90416;
 }
 
 button {
@@ -53,6 +54,23 @@ main {
   background-color: #f29422;
   min-height: 88vh;
   padding: 1rem;
+}
+
+.member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.event-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.member-image {
+  width: 100px;
 }
 
 .gallery-box {
@@ -87,12 +105,5 @@ main {
      object-fit: none;
   -o-object-position: center;
      object-position: center;
-}
-
-.event-row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 /*# sourceMappingURL=App.css.map */

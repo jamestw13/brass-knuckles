@@ -8,8 +8,6 @@ function formatDate(dateString) {
 }
 
 function Home({ scheduleData }) {
-  console.log('full: ', scheduleData);
-
   function getUpcomingEvents(item) {
     const eventDate = new Date(item.date);
     const currentDate = new Date();
@@ -20,26 +18,24 @@ function Home({ scheduleData }) {
     getUpcomingEvents(item)
   );
 
-  console.log('upcoming: ', upcomingSchedule);
-
   return (
     <>
       <h1>Brass Knuckles Quintet and Percussion</h1>
-      <section style={{ display: 'flex' }}>
-        <div>
-          <p>
-            Brass Knuckles is a five to six piece brass ensemble proudly
-            centered in Madison, Wisconsin. The group is extremely versatile,
-            playing music of many different styles to suit the diverse events
-            they are called to perform. From renaissance madrigals to dixieland,
-            Bach fugues to contemporary pop charts, Brass Knuckles delights
-            their audiences.
-          </p>
-          <p>
-            <Link to='/about'>Learn More</Link>
-          </p>
-        </div>
-        <div>photos</div>
+      <section>
+        <p>
+          Brass Knuckles is a five to six piece brass ensemble proudly centered
+          in Madison, Wisconsin. The group is extremely versatile, playing music
+          of many different styles to suit the diverse events they are called to
+          perform. From renaissance madrigals to dixieland, Bach fugues to
+          contemporary pop charts, Brass Knuckles delights their audiences.
+        </p>
+        <p>
+          <Link to='/about'>Learn More</Link>
+        </p>
+      </section>
+
+      <section>
+        <h2>photos</h2>
       </section>
 
       <section>
