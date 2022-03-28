@@ -9,20 +9,7 @@ function formatDate(dateString) {
   return `${dayjs(dateString).format('MMMM D')}`;
 }
 
-function Schedule() {
-  const [scheduleData, setScheduleData] = useState(null);
-
-  const url =
-    'https://docs.google.com/spreadsheets/d/17aCoIcb2RlGMCmlN4uvUiarDWdWJa4aFqh_IZ6ZhmME/export?format=csv';
-  const section = document.querySelector('section');
-
-  useEffect(() => {
-    fetch(url)
-      .then(result => result.text())
-      .then(csvText => csv().fromString(csvText))
-      .then(data => setScheduleData(data));
-  }, []);
-
+function Schedule({ scheduleData }) {
   return (
     <section>
       <h2>Schedule</h2>
