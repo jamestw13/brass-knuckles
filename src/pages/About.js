@@ -8,7 +8,7 @@ function About() {
       <p>Information about Brass Knuckles</p>
       <Link to='/members'>About our members</Link>
       <br />
-      <Link to='schedule'>See more performance dates</Link>
+      <Link to='/schedule'>See more performance dates</Link>
     </main>
   );
 }

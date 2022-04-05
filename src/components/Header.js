@@ -5,29 +5,22 @@ import LogoSVG from './LogoSVG';
 
 function Header() {
   return (
-    <nav>
-      <Link to='/'>
+    <nav className='flex bg-dark'>
+      <a href='/'>
         <LogoSVG />
-      </Link>
+      </a>
       <div className='nav-buttons'>
-        <button>
-          <Link to='/'>Home</Link>
-        </button>
-        <button>
-          <Link to='about'>About</Link>
-        </button>
-        <button>
-          <Link to='members'>Members</Link>
-        </button>
-        <button>
-          <Link to='schedule'>Schedule</Link>
-        </button>
-        <button>
-          <Link to='gallery'>Gallery</Link>
-        </button>
-        <button>
-          <Link to='contact'>Contact</Link>
-        </button>
+        <a href='/'>Home</a>
+
+        <a href='/about'>About</a>
+
+        <a href='/members'>Members</a>
+
+        <a href='/schedule'>Schedule</a>
+
+        <a href='/gallery'>Gallery</a>
+
+        <a href='/contact'>Contact</a>
       </div>
     </nav>
   );

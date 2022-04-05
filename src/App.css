@@ -1,109 +1,253 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+/* ------------------- */
+/* Custom Properties - */
+/* ------------------- */
+:root {
+  --clr-light: 196 27% 94%;
+  --clr-dark: 199 88% 6%;
+  --clr-brand: 197 89% 53%;
+  --clr-accent: 33 89% 54%;
+  /* // $red: #d90416;
+  // $maroon: #59071d;
+  // $light-blue: #1db6f2;
+  // $yellow: #f29422;
+  // $orange: #f26716; */
+
+  --gap: 1rem;
 }
 
+/* ------------------- */
+/* Reset ------------- */
+/* ------------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
-  background-color: #1db6f2;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility Classes --- */
+/* ------------------- */
+
+.flex {
   display: flex;
-  background-color: #59071d;
-  color: #1db6f2;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  gap: var(--gap, 1rem);
 }
 
-a {
-  text-decoration: none;
-  color: #59071d;
-}
-
-.logo {
-  padding: 1rem;
-  width: 50%;
-  fill: #1db6f2;
-}
-
-h1 {
-  margin: 0.5rem;
-  color: #d90416;
-}
-
-button {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  outline: none;
-  border: none;
-  background-color: #f26716;
-  color: #59071d;
-}
-
-main {
-  width: clamp(150px, 80%, 1000px);
-  margin: auto;
-  background-color: #f29422;
-  min-height: 88vh;
-  padding: 1rem;
-}
-
-.member {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.event-row {
-  display: -ms-grid;
+.grid {
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
 }
 
-.member-image {
-  width: 100px;
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
 }
 
-.gallery-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap-reverse;
-          flex-flow: row wrap-reverse;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.image-container {
-  margin: 0.25rem;
-  padding: 0.25rem;
-  background-color: #59071d;
-  width: 30%;
-  -webkit-transition: width 2s ease;
-  transition: width 2s ease;
+/* colors */
+
+.bg-light {
+  background-color: hsl(var(--clr-light));
 }
 
-.image-container:focus {
-  width: 100%;
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
 }
 
-.image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: none;
-     object-fit: none;
-  -o-object-position: center;
-     object-position: center;
+.bg-brand {
+  background-color: hsl(var(--clr-brand));
 }
-/*# sourceMappingURL=App.css.map */
+
+.text-light {
+  color: hsl(var(--clr-light));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+
+.text-brand {
+  color: hsl(var(--clr-brand));
+}
+
+.text-accent {
+  color: hsl(var(--clr-accent));
+}
+
+.schedule-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
+}
+/* 
+// body {
+//   background-color: $light-blue;
+// }
+
+// nav {
+//   background-color: $maroon;
+//   color: $light-blue;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: $maroon;
+// }
+*/
+.logo {
+  padding: 0.5rem 1.5rem;
+  width: 60%;
+  fill: hsl(var(--clr-accent));
+}
+/*
+// h1 {
+//   margin: 0.5rem;
+//   color: $red;
+// }
+
+// button {
+//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//   font-weight: bold;
+
+//   margin: 0.5rem;
+//   padding: 0.5rem;
+//   outline: none;
+//   border: none;
+//   background-color: $orange;
+//   color: $maroon;
+// }
+
+// main {
+//   width: clamp(150px, 80%, 1000px);
+//   margin: auto;
+//   background-color: $yellow;
+//   min-height: 88vh;
+//   padding: 1rem;
+// }
+
+// // HOME
+
+// // ABOUT
+
+// // MEMBERS
+// .member {
+//   display: flex;
+// }
+
+// // SCHEDULE
+// .event-row {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr;
+// }
+
+// .member-image {
+//   width: 100px;
+// }
+
+// // GALLERY
+
+// .gallery-box {
+//   display: flex;
+//   flex-flow: row wrap-reverse;
+//   justify-content: space-around;
+// }
+
+// .image-container {
+//   margin: 0.25rem;
+//   padding: 0.25rem;
+//   background-color: $maroon;
+//   width: 30%;
+//   &:focus {
+//     width: 100%;
+//   }
+//   transition: width 2s ease;
+// }
+
+// .image {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: none;
+//   object-position: center;
+// } */

@@ -13,22 +13,23 @@ function Schedule({ scheduleData }) {
   return (
     <section>
       <h2>{dayjs().year()} Schedule</h2>
-
-      {scheduleData ? (
-        scheduleData.map((show, index) => {
-          const { date, event, city, location } = show;
-          return (
-            <div className='event-row' key={index}>
-              <p>{formatDate(date)}</p>
-              <p>{event}</p>
-              <p>{city}</p>
-              <p>{location}</p>
-            </div>
-          );
-        })
-      ) : (
-        <h1>Loading</h1>
-      )}
+      <div className='grid schedule-grid'>
+        {scheduleData ? (
+          scheduleData.map((show, index) => {
+            const { date, event, city, location } = show;
+            return (
+              <>
+                <p>{formatDate(date)}</p>
+                <p>{event}</p>
+                <p>{city}</p>
+                <p>{location}</p>
+              </>
+            );
+          })
+        ) : (
+          <h1>Loading</h1>
+        )}
+      </div>
     </section>
   );
 }

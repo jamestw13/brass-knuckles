@@ -32,9 +32,9 @@ function App() {
   return (
     <Router>
       <Header />
-      <main>
+      <main className='container'>
         <Routes>
-          <Route path='/' element={<Home scheduleData={scheduleData} />} />
+          <Route path='' element={<Home scheduleData={scheduleData} />} />
           <Route path='about' element={<About />} />
           <Route path='members' element={<Members />} />
           <Route
