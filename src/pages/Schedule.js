@@ -18,16 +18,16 @@ function Schedule({ scheduleData }) {
         <div className='grid'>
           {scheduleData ? (
             scheduleData.map((show, index) => {
-              const { date, event, city, location } = show;
+              const { Date, Type, City, Location } = show;
               return (
                 <div
                   key={index}
                   className='event-row event-row-schedule mi-3 fs-400'
                 >
-                  <p>{formatDate(date)}</p>
-                  <p>{event}</p>
-                  <p>{city}</p>
-                  <p>{location}</p>
+                  <p>{formatDate(Date)}</p>
+                  <p>{Type}</p>
+                  <p>{City}</p>
+                  <p>{Location}</p>
                 </div>
               );
             })

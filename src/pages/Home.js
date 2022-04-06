@@ -1,15 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import dayjs from 'dayjs';
+
+import { imageData } from '../assets/images/imageData';
 
 function formatDate(dateString) {
   return `${dayjs(dateString).format('MMMM D')}`;
 }
 
 function Home({ scheduleData }) {
+  const images = [];
+  for (let i = 0; i < 5; i++) {
+    const randomNumber = Math.floor(Math.random() * imageData.length);
+    images.push(imageData[randomNumber]);
+  }
+
   function getUpcomingEvents(item) {
-    const eventDate = new Date(item.date);
+    const eventDate = new Date(item.Date);
     const currentDate = new Date();
     return eventDate >= currentDate;
   }
@@ -24,7 +31,7 @@ function Home({ scheduleData }) {
         Brass Knuckles Quintet and Percussion
       </h1>
 
-      <section className='card'>
+      <section className='card card-right'>
         <p className='fs-400 ff-sans-cond p-1'>
           Brass Knuckles is a five to six piece brass ensemble proudly centered
           in Madison, Wisconsin. The group is extremely versatile, playing music
@@ -38,32 +45,40 @@ function Home({ scheduleData }) {
         </Link>
       </section>
 
-      <div className='grid grid-row'>
-        <section className='card'>
-          <h2>photos</h2>
-        </section>
-
-        <section className='card'>
-          <h3 className='uppercase fs-500'>Next shows</h3>
-          {scheduleData ? (
-            upcomingSchedule.map((show, index) => {
-              if (index < 3) {
-                const { date, city, location } = show;
-                return (
-                  <div className='event-row event-row-home' key={index}>
-                    <p>{formatDate(date)}</p>
-                    <p>{city}</p>
-                    <p>{location}</p>
-                  </div>
-                );
-              }
-            })
-          ) : (
-            <h1>Loading</h1>
+      <section className='card card-left'>
+        <div className='image-scroller scroll-snap'>
+          {images.map(
+            (image, index) =>
+              image.id && (
+                <div key={index} className='image-element'>
+                  <img src={require(`../assets/images/${image.id}.jpg`)} />
+                  {/* <p className='title'>{image.description}</p> */}
+                </div>
+              )
           )}
-          <Link to='schedule'>See details and more dates</Link>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      <section className='card card-right'>
+        <h3 className='uppercase fs-500'>Next performances</h3>
+        {scheduleData ? (
+          upcomingSchedule.map((show, index) => {
+            if (index < 3) {
+              const { Date, City, Location } = show;
+              return (
+                <div className='event-row event-row-home' key={index}>
+                  <p>{formatDate(Date)}</p>
+                  <p>{City}</p>
+                  <p>{Location}</p>
+                </div>
+              );
+            }
+          })
+        ) : (
+          <h1>Loading</h1>
+        )}
+        <Link to='schedule'>See details and more dates</Link>
+      </section>
     </div>
   );
 }
