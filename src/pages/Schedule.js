@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import csv from 'csvtojson';
+import React from 'react';
+
 import dayjs from 'dayjs';
 
 // 17aCoIcb2RlGMCmlN4uvUiarDWdWJa4aFqh_IZ6ZhmME
@@ -11,26 +10,33 @@ function formatDate(dateString) {
 
 function Schedule({ scheduleData }) {
   return (
-    <section>
-      <h2>{dayjs().year()} Schedule</h2>
-      <div className='grid schedule-grid'>
-        {scheduleData ? (
-          scheduleData.map((show, index) => {
-            const { date, event, city, location } = show;
-            return (
-              <>
-                <p>{formatDate(date)}</p>
-                <p>{event}</p>
-                <p>{city}</p>
-                <p>{location}</p>
-              </>
-            );
-          })
-        ) : (
-          <h1>Loading</h1>
-        )}
-      </div>
-    </section>
+    <div className='grid'>
+      <h1 className='page-header uppercase ff-sans-norm fs-600'>
+        {dayjs().year()} Schedule
+      </h1>
+      <section className='card'>
+        <div className='grid'>
+          {scheduleData ? (
+            scheduleData.map((show, index) => {
+              const { date, event, city, location } = show;
+              return (
+                <div
+                  key={index}
+                  className='event-row event-row-schedule mi-3 fs-400'
+                >
+                  <p>{formatDate(date)}</p>
+                  <p>{event}</p>
+                  <p>{city}</p>
+                  <p>{location}</p>
+                </div>
+              );
+            })
+          ) : (
+            <h1>Loading</h1>
+          )}
+        </div>
+      </section>
+    </div>
   );
 }
 

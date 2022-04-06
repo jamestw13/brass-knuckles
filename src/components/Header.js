@@ -15,9 +15,9 @@ function Header() {
             Home
           </a>
         </div>
-        <div>
+        {/* <div>
           <a href='/about'>About</a>
-        </div>
+        </div> */}
         <div>
           <a href='/members'>Members</a>
         </div>
