@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/brass-knuckles/static/css/main.ee49663b.css",
-    "main.js": "/brass-knuckles/static/js/main.f0f93bf1.js",
+    "main.css": "/brass-knuckles/static/css/main.d3124018.css",
+    "main.js": "/brass-knuckles/static/js/main.c681bf91.js",
     "static/media/125.jpg": "/brass-knuckles/static/media/125.dd5a0836d5fa32e0f9e9.jpg",
     "static/media/130.jpg": "/brass-knuckles/static/media/130.b56ae1ac4ae54380e8c6.jpg",
     "static/media/129.jpg": "/brass-knuckles/static/media/129.0f430739dd633f7e77d6.jpg",
@@ -133,11 +133,11 @@
     "static/media/78.jpg": "/brass-knuckles/static/media/78.d502233d24b24d3ccc0b.jpg",
     "static/media/84.jpg": "/brass-knuckles/static/media/84.7fb3bf1fa75f5ac4c01d.jpg",
     "index.html": "/brass-knuckles/index.html",
-    "main.ee49663b.css.map": "/brass-knuckles/static/css/main.ee49663b.css.map",
-    "main.f0f93bf1.js.map": "/brass-knuckles/static/js/main.f0f93bf1.js.map"
+    "main.d3124018.css.map": "/brass-knuckles/static/css/main.d3124018.css.map",
+    "main.c681bf91.js.map": "/brass-knuckles/static/js/main.c681bf91.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee49663b.css",
-    "static/js/main.f0f93bf1.js"
+    "static/css/main.d3124018.css",
+    "static/js/main.c681bf91.js"
   ]
 }
