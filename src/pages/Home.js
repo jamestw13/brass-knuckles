@@ -21,7 +21,7 @@ function Home({ scheduleData }) {
     return eventDate >= currentDate;
   }
 
-  const upcomingSchedule = scheduleData?.filter(item => getUpcomingEvents(item));
+  const upcomingSchedule = scheduleData?.filter(item => getUpcomingEvents(item)).slice(0, 3);
 
   return (
     <div className="grid">
@@ -46,7 +46,7 @@ function Home({ scheduleData }) {
             (image, index) =>
               image.id && (
                 <div key={index} className="image-element">
-                  <img src={require(`../assets/images/${image.id}.jpg`)} />
+                  <img src={require(`../assets/images/${image.id}.jpg`)} alt="" />
                   {/* <p className='title'>{image.description}</p> */}
                 </div>
               )
@@ -58,18 +58,16 @@ function Home({ scheduleData }) {
         <h3 className="uppercase fs-500">Next performances</h3>
         {scheduleData ? (
           upcomingSchedule.map((show, index) => {
-            if (index < 3) {
-              const { ID, Date, Location } = show;
-              return (
-                <Link to={`/schedule#${ID}`}>
-                  <div className="event-row event-row-home" id={ID} key={index}>
-                    <p>{formatDate(Date)}</p>
+            const { ID, Date, Location } = show;
+            return (
+              <Link to={`/schedule#${ID}`}>
+                <div className="event-row event-row-home" id={ID} key={index}>
+                  <p>{formatDate(Date)}</p>
 
-                    <p>{Location}</p>
-                  </div>
-                </Link>
-              );
-            }
+                  <p>{Location}</p>
+                </div>
+              </Link>
+            );
           })
         ) : (
           <h1>Loading</h1>

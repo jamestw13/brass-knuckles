@@ -40,7 +40,7 @@ function About() {
             </p>
           </div>
           <div>
-            <img src={require('../assets/images/44.jpg')} />
+            <img src={require('../assets/images/44.jpg')} alt="" />
           </div>
         </div>
       </section>

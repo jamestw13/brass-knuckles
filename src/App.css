@@ -276,7 +276,7 @@ select {
 .footer-bar {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 2rem;
   padding: 1rem;
   margin-block-start: 2rem;
