@@ -5,7 +5,7 @@ import LogoSVG from './LogoSVG';
 
 function Header() {
   return (
-    <nav className="flex bg-dark text-accent header-bar">
+    <nav className="flex text-accent header-bar">
       <Link to="/">
         <LogoSVG />
       </Link>

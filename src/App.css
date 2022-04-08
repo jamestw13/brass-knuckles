@@ -84,7 +84,8 @@ body {
 }
 
 /* A elements */
-a {
+a,
+a:visited {
   text-decoration-skip-ink: auto;
   color: hsl(var(--clr-accent));
 }
@@ -266,14 +267,15 @@ select {
 /* Components ---- */
 /* --------------- */
 
-.schedule-grid {
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5em;
-}
-
 .header-bar {
   justify-content: space-around;
   align-items: center;
+  background-color: hsl(var(--clr-brand) / 0.25);
+}
+
+.footer-bar .schedule-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
 }
 
 .logo {
@@ -281,8 +283,8 @@ select {
   width: 60%;
   fill: hsl(var(--clr-accent));
   border-radius: 1em;
-  margin: 0.25em;
-  border: 2px solid hsl(var(--clr-dark));
+  margin: 0.5em;
+  border: 2px solid hsl(var(--clr-brand) hsl(var(--clr-brand) / 0.25));
 }
 
 .nav-buttons {
@@ -342,12 +344,18 @@ select {
   border-radius: 1rem;
   box-shadow: hsl(var(--clr-dark) / 0.5) 0.25em 0.25em;
 }
+
+.event-row:hover {
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-brand));
+}
+
 .event-row p {
   text-transform: capitalize;
 }
 
 .event-row-home {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .event-row-schedule {

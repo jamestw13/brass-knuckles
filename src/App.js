@@ -13,12 +13,12 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [scheduleData, setScheduleData] = useState(null);
 
-  const url =
-    'https://docs.google.com/spreadsheets/d/17aCoIcb2RlGMCmlN4uvUiarDWdWJa4aFqh_IZ6ZhmME/export?format=csv';
+  const url = 'https://docs.google.com/spreadsheets/d/17aCoIcb2RlGMCmlN4uvUiarDWdWJa4aFqh_IZ6ZhmME/export?format=csv';
 
   useEffect(() => {
     fetch(url)
@@ -32,19 +32,17 @@ function App() {
   return (
     <Router>
       <Header />
-      <main className='container'>
+      <main className="container">
         <Routes>
-          <Route path='' element={<Home scheduleData={scheduleData} />} />
-          <Route path='about' element={<About />} />
-          <Route path='members' element={<Members />} />
-          <Route
-            path='schedule'
-            element={<Schedule scheduleData={scheduleData} />}
-          />
-          <Route path='gallery' element={<Gallery />} />
-          <Route path='contact' element={<Contact />} />
+          <Route path="" element={<Home scheduleData={scheduleData} />} />
+          <Route path="about" element={<About />} />
+          <Route path="members" element={<Members />} />
+          <Route path="schedule" element={<Schedule scheduleData={scheduleData} />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="contact" element={<Contact />} />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 }
