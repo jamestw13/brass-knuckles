@@ -19,22 +19,22 @@ function App() {
 
   const url =
     'https://docs.google.com/spreadsheets/d/17aCoIcb2RlGMCmlN4uvUiarDWdWJa4aFqh_IZ6ZhmME/export?format=csv';
-  const section = document.querySelector('section');
 
   useEffect(() => {
-    const schedule = fetch(url)
+    fetch(url)
       .then(result => result.text())
       .then(csvText => csv().fromString(csvText))
-      .then(data => data.filter(item => item.event !== 'Rehearsal'))
+      .then(data => data.filter(item => item.Type !== 'Rehearsal' && item.Date))
+      // .then(data => console.log(data))
       .then(data => setScheduleData(data));
   }, []);
 
   return (
     <Router>
       <Header />
-      <main>
+      <main className='container'>
         <Routes>
-          <Route path='/' element={<Home scheduleData={scheduleData} />} />
+          <Route path='' element={<Home scheduleData={scheduleData} />} />
           <Route path='about' element={<About />} />
           <Route path='members' element={<Members />} />
           <Route
