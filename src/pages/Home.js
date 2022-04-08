@@ -45,10 +45,11 @@ function Home({ scheduleData }) {
           {images.map(
             (image, index) =>
               image.id && (
-                <div key={index} className="image-element">
-                  <img src={require(`../assets/images/${image.id}.jpg`)} alt="" />
-                  {/* <p className='title'>{image.description}</p> */}
-                </div>
+                <Link to="/gallery">
+                  <div key={index} className="image-element">
+                    <img src={require(`../assets/images/${image.id}.jpg`)} alt="" />
+                  </div>
+                </Link>
               )
           )}
         </div>
