@@ -22,9 +22,9 @@ function Header() {
         <Link to="/schedule">
           <p>Schedule</p>
         </Link>
-        {/* <Link to ='/gallery'>
-          <p >Gallery</p>
-        </Link> */}
+        <Link to="/gallery">
+          <p>Gallery</p>
+        </Link>
         {/* <Link to='/contact'>
           <p>Contact</p>
         </Link> */}
