@@ -437,12 +437,19 @@ select {
   border: 0.5em solid hsl(var(--clr-accent));
   margin-bottom: 0.5rem;
   break-inside: avoid;
+  transition: transform 250ms ease;
+}
+
+.image-container:hover {
+  transform: translatey(-0.25rem);
+  border: 0.5em solid hsl(var(--clr-brand) / 0.5);
 }
 
 .video {
   width: 100%;
   aspect-ratio: 16/9;
   border: none;
+  z-index: 3;
 }
 .featured {
   column-span: all;
