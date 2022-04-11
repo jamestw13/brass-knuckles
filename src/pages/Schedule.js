@@ -16,13 +16,14 @@ function Schedule({ scheduleData }) {
         <div className="grid">
           {scheduleData ? (
             scheduleData.map((show, index) => {
-              const { ID, Date, Type, City, Location } = show;
+              const { ID, Date, Type, City, Location, WebLink } = show;
               return (
-                <div id={ID} key={index} className="event-row event-row-schedule mi-3 fs-400">
+                <div href={WebLink} id={ID} key={index} className="event-row event-row-schedule mi-3 fs-400">
                   <p>{formatDate(Date)}</p>
                   <p>{Type}</p>
                   <p>{City}</p>
                   <p>{Location}</p>
+                  {WebLink && <a href={WebLink}>Event Link</a>}
                 </div>
               );
             })
