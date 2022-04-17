@@ -65,7 +65,7 @@ function Home({ scheduleData }) {
       </section>
 
       <section className='card card-right'>
-        <h3 className='uppercase fs-500'>Next performances</h3>
+        <h3 className='card-header'>Next performances</h3>
         {scheduleData ? (
           upcomingSchedule.map((show, index) => {
             const { ID, Date, Location } = show;

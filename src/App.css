@@ -293,6 +293,12 @@ select {
   box-shadow: hsl(var(--clr-light) / 0.5) 0.25em 0.25em;
 }
 
+.card-header {
+  font-family: var(--ff-sans-cond);
+  padding: 0.5em 0.75em;
+  text-transform: capitalize;
+}
+
 /* .card-right {
   margin-left: 5rem;
   margin-right: 1rem;
