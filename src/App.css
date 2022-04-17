@@ -272,6 +272,35 @@ select {
 /* Components ---- */
 /* --------------- */
 
+/* Layout */
+
+.body {
+  display: grid;
+  grid-template-columns: 1rem 1fr 1rem;
+  grid-template-areas:
+    'header header header'
+    '. main .'
+    'footer footer footer';
+}
+
+.header-bar {
+  grid-area: header;
+}
+
+.container {
+  grid-area: main;
+  max-width: 120ch;
+}
+
+.footer-bar {
+  grid-area: footer;
+}
+
+.page {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
 /* General components */
 
 .page-header {
@@ -460,8 +489,15 @@ select {
 }
 
 /* About page components */
+.about-page {
+  grid-template-columns: 1fr;
+  grid-template-areas: '';
+}
+
 .about-image {
-  display: none;
+  border: 0.25em solid hsl(var(--clr-accent));
+  border-radius: var(--br);
+  margin: 0.5em;
 }
 
 /* Schedule page components */
@@ -548,56 +584,54 @@ select {
   column-span: all;
 }
 
-/* ---------- */
-/* Layout --- */
-/* ---------- */
-.body {
-  display: grid;
-  grid-template-columns: 1rem 1fr 1rem;
-  grid-template-areas:
-    'header header header'
-    '. main .'
-    'footer footer footer';
-}
-
-.header-bar {
-  grid-area: header;
-}
-
-.container {
-  grid-area: main;
-}
-
-.footer-bar {
-  grid-area: footer;
-}
-
-.page {
-  display: grid;
-  gap: var(--gap, 1rem);
-}
-
 @media (min-width: 43em) {
-  .body {
+  /* .body {
     grid-template-columns: 3rem 1fr 3rem;
-  }
+  } */
 
   .image-scroller-container {
     display: inherit;
   }
 
+  .about-page {
+    display: grid;
+    grid-template-columns: 80ch, 40ch;
+    grid-template-areas:
+      'about-1 about-1'
+      'about-2 about-image'
+      'about-3 about-3'
+      'about-4 about-4';
+  }
+
+  .about-1 {
+    grid-area: about-1;
+  }
+
+  .about-2 {
+    grid-area: about-2;
+  }
+
+  .about-3 {
+    grid-area: about-3;
+  }
+
+  .about-4 {
+    grid-area: about-4;
+  }
+
   .about-image {
-    display: inherit;
+    grid-area: about-image;
+    max-width: 25rem;
   }
 }
 
 @media (min-width: 62em) {
-  .body {
+  /* .body {
     grid-template-columns: 5rem 1fr 5rem;
-  }
+  } */
 }
 @media (min-width: 82em) {
-  .body {
+  /* .body {
     grid-template-columns: 9rem 1fr 9rem;
-  }
+  } */
 } ;
