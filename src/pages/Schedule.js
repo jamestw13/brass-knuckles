@@ -10,15 +10,20 @@ function formatDate(dateString) {
 
 function Schedule({ scheduleData }) {
   return (
-    <div className="grid">
-      <h1 className="page-header uppercase ff-sans-norm fs-600">{dayjs().year()} Schedule</h1>
-      <section className="card">
-        <div className="grid">
+    <div className='page'>
+      <h1 className='page-header '>{dayjs().year()} Schedule</h1>
+      <section className='card'>
+        <div className=''>
           {scheduleData ? (
             scheduleData.map((show, index) => {
               const { ID, Date, Type, City, Location, WebLink } = show;
               return (
-                <div href={WebLink} id={ID} key={index} className="event-row event-row-schedule mi-3 fs-400">
+                <div
+                  href={WebLink}
+                  id={ID}
+                  key={index}
+                  className='event-row event-row-schedule fs-400'
+                >
                   <p>{formatDate(Date)}</p>
                   <p>{Type}</p>
                   <p>{City}</p>

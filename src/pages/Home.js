@@ -37,7 +37,8 @@ function Home({ scheduleData }) {
           in Madison, Wisconsin. The group is extremely versatile, playing music
           of many different styles to suit the diverse events they are called to
           perform. From renaissance madrigals to dixieland, Bach fugues to
-          contemporary pop charts, Brass Knuckles delights their audiences.
+          contemporary pop charts, Brass Knuckles has something for every
+          audience.
         </p>
 
         <Link to='/about'>

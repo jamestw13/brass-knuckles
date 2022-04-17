@@ -45,7 +45,7 @@ function About() {
               .
             </p>
           </div>
-          <div>
+          <div className='about-image'>
             <img src={require('../assets/images/44.jpg')} alt='' />
           </div>
         </div>
