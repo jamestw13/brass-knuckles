@@ -14,8 +14,7 @@ function About() {
           LeClaire. That group enjoyed much success with the model of adding a
           percussionist to a traditional brass quintet and Impact of Brass
           members Craig Mason (horn), Jim Latimer (drums), Norm Bakker
-          (trumpet), Alex Bauer (trombone), Karl Zelle (tuba) created the Brass
-          Knuckles.
+          (trumpet), and Alex Bauer (trombone) created the Brass Knuckles.
         </p>
 
         <p className='about-2 fs-400 ff-sans-cond p-1'>
