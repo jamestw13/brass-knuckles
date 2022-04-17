@@ -11,9 +11,10 @@ function formatDate(dateString) {
 function Schedule({ scheduleData }) {
   return (
     <div className='page'>
-      <h1 className='page-header '>{dayjs().year()} Schedule</h1>
+      <h1 className='page-header'>{dayjs().year()} Schedule</h1>
+
       <section className='card'>
-        <div className=''>
+        <div className='schedule-grid'>
           {scheduleData ? (
             scheduleData.map((show, index) => {
               const { ID, Date, Type, City, Location, WebLink } = show;

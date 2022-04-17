@@ -139,6 +139,9 @@ select {
 
   /* border radius */
   --br: 0.5rem;
+
+  /* image border */
+  --img-b: 0.2em;
 }
 
 /* ------------------- */
@@ -348,7 +351,7 @@ select {
   fill: hsl(var(--clr-accent));
   border-radius: var(--br);
   margin: var(--gap, 0.5em);
-  border: 2px solid hsl(var(--clr-brand) hsl(var(--clr-brand) / 0.25));
+  border: var(--img-b) solid hsl(var(--clr-brand) hsl(var(--clr-brand) / 0.25));
 }
 
 .logo:hover {
@@ -376,7 +379,7 @@ select {
 
 .nav-buttons > * {
   padding: 0.5em 0.75em;
-  border: 2px solid hsl(var(--clr-brand));
+  border: var(--img-b) solid hsl(var(--clr-brand));
   border-radius: var(--br);
   background-color: hsl(var(--clr-brand) / 0.1);
   font-family: var(--ff-sans-norm);
@@ -495,7 +498,7 @@ select {
 }
 
 .about-image {
-  border: 0.25em solid hsl(var(--clr-accent));
+  border: var(--img-b) solid hsl(var(--clr-accent));
   border-radius: var(--br);
   margin: 0.5em;
 }
@@ -503,6 +506,7 @@ select {
 /* Schedule page components */
 
 .schedule-grid {
+  display: grid;
 }
 
 .event-row {
@@ -563,7 +567,7 @@ select {
 .image-container {
   width: 100%;
   border-radius: var(--br);
-  border: 0.5em solid hsl(var(--clr-accent));
+  border: var(--img-b) solid hsl(var(--clr-accent));
   margin-bottom: 0.5rem;
   break-inside: avoid;
   transition: transform 250ms ease;
@@ -571,13 +575,14 @@ select {
 
 .image-container:hover {
   transform: translatey(-0.25rem);
-  border: 0.5em solid hsl(var(--clr-brand) / 0.5);
+  border: var(--img-b) solid hsl(var(--clr-brand) / 0.5);
 }
 
 .video {
   width: 100%;
   aspect-ratio: 16/9;
-  border: none;
+  border-radius: var(--br);
+  border: var(--img-b) solid hsl(var(--clr-accent));
   z-index: 3;
 }
 .featured {
@@ -626,9 +631,36 @@ select {
 }
 
 @media (min-width: 62em) {
-  /* .body {
-    grid-template-columns: 5rem 1fr 5rem;
-  } */
+  .about-page {
+    display: grid;
+    grid-template-columns: 80ch, 40ch;
+    grid-template-areas:
+      'about-1 about-1'
+      'about-2 about-image'
+      'about-3 about-image'
+      'about-4 about-4';
+  }
+
+  .about-1 {
+    grid-area: about-1;
+  }
+
+  .about-2 {
+    grid-area: about-2;
+  }
+
+  .about-3 {
+    grid-area: about-3;
+  }
+
+  .about-4 {
+    grid-area: about-4;
+  }
+
+  .about-image {
+    grid-area: about-image;
+    max-width: 25rem;
+  }
 }
 @media (min-width: 82em) {
   /* .body {
