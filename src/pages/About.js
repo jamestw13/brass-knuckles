@@ -11,7 +11,7 @@ function About() {
           The Brass Knuckles Quintet and Percussion formed in 2016 by the
           members of a similar ensemble, Impact of Brass, which discontinued
           with the retirement of that group's leader and trumpeter, Sandy
-          LeClaire. That group enjoyed much success with the model of adding a
+          LeClair. That group enjoyed much success with the model of adding a
           percussionist to a traditional brass quintet and Impact of Brass
           members Craig Mason (horn), Jim Latimer (drums), Norm Bakker
           (trumpet), and Alex Bauer (trombone) created the Brass Knuckles.
