@@ -3,10 +3,34 @@ import React from 'react';
 
 function Contact() {
   return (
-    <section>
-      <h2>Contact</h2>
-      <p>Links to Social media and email</p>
-    </section>
+    <div className='page'>
+      <h1 className='page-header ff-sans-cond fs-600'>Contact us</h1>
+      <section className='card'>
+        <form action='#' className='form'>
+          <div className='form-item'>
+            <input
+              type='text'
+              className='form-input'
+              placeholder='Your name'
+              aria-label='Your name'
+            />
+          </div>
+
+          <div className='form-item'>
+            <input
+              type='email'
+              className='form-input'
+              placeholder='Your email'
+              aria-label='Your email'
+            />
+          </div>
+
+          <button className='form-button' type='submit'>
+            Send
+          </button>
+        </form>
+      </section>
+    </div>
   );
 }
 

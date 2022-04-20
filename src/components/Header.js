@@ -43,9 +43,9 @@ function Header() {
               <Link to='/gallery' onClick={toggleMenu}>
                 <p>Gallery</p>
               </Link>
-              {/* <Link to='/contact' onClick={toggleMenu}>
+              <Link to='/contact' onClick={toggleMenu}>
                 <p>Contact</p>
-              </Link> */}
+              </Link>
             </div>
           </div>
         )}
@@ -69,9 +69,9 @@ function Header() {
           <Link to='/gallery'>
             <p>Gallery</p>
           </Link>
-          {/* <Link to='/contact'>
-          <p>Contact</p>
-        </Link> */}
+          <Link to='/contact'>
+            <p>Contact</p>
+          </Link>
         </div>
       </div>
     </nav>
