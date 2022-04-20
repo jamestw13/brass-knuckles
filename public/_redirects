@@ -1,5 +1,3 @@
 # Redirects for netlify requests
 
-/gallery    /gallery
-/about      /about
-/schedule   /schedule
+/* /index.html 200
