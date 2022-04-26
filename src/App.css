@@ -208,10 +208,7 @@ select {
 .text-accent {
   color: hsl(var(--clr-accent));
 }
-
-/* typography */
-
-.ff-sans-norm {
+brass kn .ff-sans-norm {
   font-family: var(--ff-sans-norm);
 }
 .ff-sans-cond {
@@ -270,7 +267,7 @@ select {
 .mi-3 {
   margin-inline: 3rem;
 }
-
+brass kn
 /* --------------- */
 /* Components ---- */
 /* --------------- */
@@ -327,6 +324,7 @@ select {
 
 .card-header {
   font-family: var(--ff-sans-cond);
+  font-size: var(--fs-500);
   padding: 0.5em 0.75em;
   text-transform: capitalize;
 }
@@ -452,6 +450,14 @@ select {
 }
 
 /* Home page components */
+
+.news-item {
+  margin: 0 1em 1em;
+  padding: 1em;
+  border-radius: var(--br);
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-brand) / 1);
+}
 
 .image-scroller-container {
   display: none;

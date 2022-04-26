@@ -46,6 +46,45 @@ function Home({ scheduleData }) {
         </Link>
       </section>
 
+      <section className='card news'>
+        <h3 className='card-header'>News</h3>
+        <div className='news-item'>
+          <h3>Loud Quintet Up for Silent Auction</h3>
+          <h4>April 25, 2022</h4>
+          <p>
+            In support of{' '}
+            <a
+              href='rockin4als.org'
+              style={{
+                color: 'hsl(var(--clr-dark)/.75)',
+                textDecoration: 'underline',
+                fontWeight: '600',
+              }}
+            >
+              Rockin4ALS
+            </a>
+            , Brass Knuckles is donating a performance. The winner of the silent
+            can book us for an hour long performance for an event of their
+            choosing. The silent auction is happening during the 20th Annual
+            Rockin For A Cure event happening on April 30th at the Wyndham
+            Garden Madison Hotel.
+            <br />
+            Check out the{' '}
+            <a
+              href='https://www.facebook.com/events/325005082925550'
+              style={{
+                color: 'hsl(var(--clr-dark)/.75)',
+                textDecoration: 'underline',
+                fontWeight: '600',
+              }}
+            >
+              Rockin For A Cure Facebook event
+            </a>{' '}
+            for more details.
+          </p>
+        </div>
+      </section>
+
       <section className='card card-left image-scroller-container'>
         <div className='image-scroller scroll-snap'>
           {images.map(
