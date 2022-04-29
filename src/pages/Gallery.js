@@ -1,13 +1,8 @@
 import React from 'react';
-import { imageData } from '../assets/images/imageData';
+import { imageData } from '../assets/gallery-images/imageData';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 function Gallery() {
-  const images = [];
-  for (let i = 0; i < 20; i++) {
-    const randomNumber = Math.floor(Math.random() * imageData.length);
-    images.push(imageData[randomNumber]);
-  }
   return (
     <div className='page'>
       <h1 className='page-header uppercase ff-sans-norm fs-600'>Gallery</h1>
@@ -36,7 +31,7 @@ function Gallery() {
                   <div className='image' key={index}>
                     <img
                       loading='lazy'
-                      src={require(`../assets/images/${index + 1}.jpg`)}
+                      src={require(`../assets/gallery-images/${index + 1}.jpg`)}
                       alt={image.description}
                     />
                   </div>

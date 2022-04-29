@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 
-import { imageData } from '../assets/images/imageData';
+import { imageData } from '../assets/gallery-images/imageData';
 
 function formatDate(dateString) {
   return `${dayjs(dateString).format('MMMM D')}`;
@@ -93,7 +93,7 @@ function Home({ scheduleData }) {
                 <Link to='/gallery' key={index}>
                   <div key={index} className='image-element'>
                     <img
-                      src={require(`../assets/images/${image.id}.jpg`)}
+                      src={require(`../assets/gallery-images/${image.id}.jpg`)}
                       alt=''
                     />
                   </div>

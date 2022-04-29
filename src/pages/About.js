@@ -44,7 +44,7 @@ function About() {
         </p>
 
         <div className='about-image'>
-          <img src={require('../assets/images/44.jpg')} alt='' />
+          <img src={require('../assets/gallery-images/44.jpg')} alt='' />
         </div>
       </section>
     </div>

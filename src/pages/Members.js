@@ -2,53 +2,82 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 function About() {
+  const members = [
+    {
+      status: 'current',
+      name: 'Alex Bauer',
+      instrument: 'Trombone',
+      bio: '',
+      img: '3',
+    },
+    {
+      status: 'current',
+      name: 'Dan Cross',
+      instrument: 'Trumpet',
+      bio: '',
+      img: '5',
+    },
+    {
+      status: 'current',
+      name: 'TJ James',
+      instrument: 'Trumpet',
+      bio: '',
+      img: '22',
+    },
+    {
+      status: 'current',
+      name: 'Jim Latimer',
+      instrument: 'Percussion',
+      bio: '',
+      img: '55',
+    },
+    {
+      status: 'current',
+      name: 'Craig Mason',
+      instrument: 'Horn',
+      bio: '',
+      img: '4',
+    },
+    {
+      status: 'current',
+      name: 'Karl Zelle',
+      instrument: 'Tuba',
+      bio: '',
+      img: '1',
+    },
+    {
+      status: 'honorary',
+      name: '',
+      instrument: '',
+      bio: '',
+      img: '',
+    },
+    {
+      status: 'honorary',
+      name: '',
+      instrument: '',
+      bio: '',
+      img: '',
+    },
+  ];
   return (
     <div className='page'>
-      <section>
-        <h2>Members</h2>
-
-        <article className='member'>
-          <div>
-            <h3>Alex Bauer</h3>
-            <h4>Trombone</h4>
-          </div>
-          <img
-            className='member-image'
-            src={require(`../assets/images/1.jpg`)}
-            alt=''
-          />
-        </article>
-        <article className='member'>
-          <div>
-            <h3>Dan Cross</h3>
-            <h4>Trumpet</h4>
-          </div>
-        </article>
-        <article className='member'>
-          <div>
-            <h3>TJ James</h3>
-            <h4>Trumpet</h4>
-          </div>
-        </article>
-        <article className='member'>
-          <div>
-            <h3>Jim Latimer</h3>
-            <h4>Percussion</h4>
-          </div>
-        </article>
-        <article className='member'>
-          <div>
-            <h3>Craig Mason</h3>
-            <h4>Horn</h4>
-          </div>
-        </article>
-        <article className='member'>
-          <div>
-            <h3>Karl Zelle</h3>
-            <h4>Tuba</h4>
-          </div>
-        </article>
-      </section>
+      <h1 className='page-header'>Members</h1>
+      {members.map((member, index) => {
+        return (
+          member.status === 'current' && (
+            <div className='card member' key={index}>
+              <h3>{member.name}</h3>
+              <h4>{member.instrument}</h4>
+              <img
+                className='member-image'
+                src={require(`../assets/gallery-images/${member.img}.jpg`)}
+                alt={`photo of ${member.name}`}
+              />
+            </div>
+          )
+        );
+      })}
     </div>
   );
 }
