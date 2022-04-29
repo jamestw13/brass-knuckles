@@ -267,7 +267,7 @@ brass kn .ff-sans-norm {
 .mi-3 {
   margin-inline: 3rem;
 }
-brass kn
+
 /* --------------- */
 /* Components ---- */
 /* --------------- */
@@ -289,7 +289,7 @@ brass kn
 
 .container {
   grid-area: main;
-  max-width: 120ch;
+  width: 100%;
 }
 
 .footer-bar {
@@ -342,7 +342,7 @@ brass kn
 /* Logo component */
 .logo {
   box-sizing: content-box;
-  width: 9em;
+  width: min(50%, 10rem);
 
   padding: 0.5em 1em;
 
@@ -512,7 +512,7 @@ brass kn
 /* Schedule page components */
 
 .schedule-grid {
-  display: grid;
+  /* display: grid; */
 }
 
 .event-row {
@@ -564,10 +564,10 @@ brass kn
 }
 
 .gallery-box {
-  display: column;
-  column-count: 3;
-  margin-bottom: 0.5rem;
-  gap: var(--gap, 1rem);
+  /* display: column;
+  column-count: 3; */
+  /* margin-bottom: 0.5rem;
+  gap: var(--gap, 1rem); */
 }
 
 .image-container {
@@ -587,12 +587,9 @@ brass kn
 .video {
   width: 100%;
   aspect-ratio: 16/9;
-  border-radius: var(--br);
-  border: var(--img-b) solid hsl(var(--clr-accent));
+  /* border-radius: var(--br);
+  border: var(--img-b) solid hsl(var(--clr-accent)); */
   z-index: 3;
-}
-.featured {
-  column-span: all;
 }
 
 @media (min-width: 43em) {

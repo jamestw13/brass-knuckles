@@ -27,7 +27,7 @@ function Home({ scheduleData }) {
 
   return (
     <div className='page'>
-      <h1 className='page-header ff-sans-norm '>
+      <h1 className='page-header ff-sans-norm'>
         Brass Knuckles Quintet and Percussion
       </h1>
 
