@@ -15,7 +15,6 @@ function Gallery() {
       <section className='card'>
         <div className='video'>
           <iframe
-            // className='video'
             src='https://www.youtube.com/embed/lUhTArdldZc'
             title='Brass Knuckles - Three Susato Dances #1'
             frameBorder='0'
@@ -31,10 +30,8 @@ function Gallery() {
                   <div className='image' key={index}>
                     <img
                       loading='lazy'
-                      // className='image'
                       src={require(`../assets/images/${index + 1}.jpg`)}
-                      description={image.description}
-                      alt=''
+                      alt={image.description}
                     />
                   </div>
                 )
