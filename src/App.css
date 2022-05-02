@@ -508,6 +508,41 @@ brass kn .ff-sans-norm {
   margin: 0.5em;
 }
 
+/* Member page components */
+
+.member-card {
+}
+
+.member-image {
+  border-radius: var(--br);
+  margin: 0.25em auto;
+  max-width: 95%;
+}
+
+.member-name {
+  display: inline;
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-brand));
+  border-radius: var(--br);
+  padding-inline: 0.25rem;
+  margin-inline: 0.25rem;
+
+  font-size: var(--fs-500);
+}
+
+.member-instrument {
+  color: hsl(var(--clr-light));
+  border-radius: var(--br);
+  padding: 0 0.25rem;
+  margin: 0 0.25rem;
+
+  font-size: var(--fs-400);
+}
+
+.member-bio {
+  margin-inline: 1em;
+}
+
 /* Schedule page components */
 
 .schedule-grid {
