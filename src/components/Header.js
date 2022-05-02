@@ -34,9 +34,9 @@ function Header() {
               <Link to='/about' onClick={toggleMenu}>
                 <p>About</p>
               </Link>
-              {/* <Link to='/members' onClick={toggleMenu}>
+              <Link to='/members' onClick={toggleMenu}>
                 <p>Members</p>
-              </Link> */}
+              </Link>
               <Link to='/schedule' onClick={toggleMenu}>
                 <p>Schedule</p>
               </Link>
@@ -60,9 +60,9 @@ function Header() {
           <Link to='/about'>
             <p>About</p>
           </Link>
-          {/* <Link to='/members'>
-          <p>Members</p>
-        </Link> */}
+          <Link to='/members'>
+            <p>Members</p>
+          </Link>
           <Link to='/schedule'>
             <p>Schedule</p>
           </Link>
