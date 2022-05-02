@@ -135,5 +135,5 @@ export const imageData = [
   { id: 126, tags: [], description: '', date: '' },
   { id: 127, tags: [], description: '', date: '' },
   { id: 128, tags: [], description: '', date: '' },
-  { id: 129, tags: [], description: '', date: '' },
+  // { id: 129, tags: [], description: '', date: '' },
 ];
