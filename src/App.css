@@ -510,8 +510,8 @@ brass kn .ff-sans-norm {
 
 /* Member page components */
 
-.member-card {
-}
+/* .member-card {
+} */
 
 .member-image {
   border-radius: var(--br);
@@ -547,6 +547,7 @@ brass kn .ff-sans-norm {
 
 .schedule-grid {
   display: grid;
+  padding-bottom: 1em;
 }
 
 .event-row {
