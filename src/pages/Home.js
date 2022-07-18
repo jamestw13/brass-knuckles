@@ -71,7 +71,7 @@ function Home({ scheduleData, newsData }) {
         )}
 
         <Link to="/news">
-          <p>See other BK News</p>
+          <p className="text-accent p-1">See other BK News</p>
         </Link>
       </section>
 
