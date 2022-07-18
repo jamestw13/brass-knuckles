@@ -6,7 +6,7 @@ function formatDate(dateString) {
 }
 
 function News({ newsData }) {
-  newsData = newsData.sort((a, b) => Date.parse(b.PostDate) - Date.parse(a.PostDate));
+  newsData = newsData?.sort((a, b) => Date.parse(b.PostDate) - Date.parse(a.PostDate));
   return (
     <div className="page">
       <h1 className="page-header"> News</h1>
