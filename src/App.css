@@ -425,7 +425,7 @@ brass kn .ff-sans-norm {
   display: none;
 }
 
-@media (min-width: 43em) {
+@media (min-width: 60em) {
   .nav-mobile {
     display: none;
   }
@@ -537,35 +537,48 @@ brass kn .ff-sans-norm {
   font-size: var(--fs-400);
 }
 
-.member-card .member-content {
-  display: flex;
-  align-items: center;
-}
-
-.member-card:nth-child(even) .member-content {
-  flex-direction: row-reverse;
+.member-content {
+  flex-direction: column;
+  justify-content: center;
 }
 
 .member-image-container {
-  width: 40%;
-  padding: 0 1em 1em 1em;
+  width: 90%;
+  margin: auto;
 }
 .member-image {
   border-radius: var(--br);
-  margin: auto;
 }
 
 .member-bio {
-  width: 60%;
+  width: 90%;
   border-radius: var(--br);
-  font-size: 1.25em;
+
   background-color: hsl(var(--clr-brand) / 0.5);
-  min-height: 50%;
 
   padding: 1em;
-  margin-inline: 1em;
+  margin-block: 0.5em;
+  margin-inline: 0.5em;
 }
 
+@media (min-width: 60em) {
+  .member-bio {
+    width: 90%;
+  }
+  .member-image-container {
+    width: 40%;
+    padding: 0 1em 1em 1em;
+  }
+  .member-card .member-content {
+    display: flex;
+
+    flex-direction: row;
+  }
+
+  .member-card:nth-child(even) .member-content {
+    flex-direction: row-reverse;
+  }
+}
 /* Schedule page components */
 
 .schedule-grid {
@@ -722,6 +735,10 @@ brass kn .ff-sans-norm {
   .about-image {
     grid-area: about-image;
     max-width: 25rem;
+  }
+
+  .member-bio {
+    font-size: 1.25em;
   }
 }
 @media (min-width: 82em) {
