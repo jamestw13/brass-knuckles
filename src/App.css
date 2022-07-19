@@ -451,7 +451,7 @@ brass kn .ff-sans-norm {
 /* Home page components */
 
 .news-item {
-  margin: 0 1em 1em;
+  margin: 1em 1em;
   padding: 1em;
   border-radius: var(--br);
   color: hsl(var(--clr-dark));
@@ -573,11 +573,17 @@ brass kn .ff-sans-norm {
 }
 
 .event-row-home {
-  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .event-row-schedule {
-  flex: 1 1 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.event-row-past {
+  background-color: var(--clr-dark);
 }
 
 .event-row-past {

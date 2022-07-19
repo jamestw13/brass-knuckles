@@ -12,14 +12,14 @@ function News({ newsData }) {
       <h1 className="page-header"> News</h1>
 
       <section className="card">
-        <div className="schedule-grid">
+        <div>
           {newsData ? (
             newsData.map((news, index) => {
               const { Title, PostDate, Body } = news;
               return (
-                <div key={index} className="event-row event-row-schedule fs-400">
-                  <p>{Title}</p>
-                  <p>{formatDate(PostDate)}</p>
+                <div key={index} className="news-item m-1">
+                  <h3 className="news-title">{Title}</h3>
+                  <h4>{formatDate(PostDate)}</h4>
                   <p>{Body}</p>
                 </div>
               );

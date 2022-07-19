@@ -94,12 +94,12 @@ function Home({ scheduleData, newsData }) {
         <h3 className="card-header">Next performances</h3>
         {scheduleData ? (
           upcomingSchedule.map((show, index) => {
-            const { ID, Date, Location } = show;
+            const { ID, Date, Location, City } = show;
             return (
               <Link to={`/schedule#${ID}`} key={index}>
                 <div className="event-row event-row-home" id={ID} key={index}>
                   <p>{formatDate(Date)}</p>
-
+                  <p>{City}</p>
                   <p>{Location}</p>
                 </div>
               </Link>

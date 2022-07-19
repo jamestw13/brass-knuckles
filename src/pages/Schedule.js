@@ -10,21 +10,19 @@ function formatDate(dateString) {
 
 function Schedule({ scheduleData }) {
   return (
-    <div className='page'>
-      <h1 className='page-header'>{dayjs().year()} Schedule</h1>
+    <div className="page">
+      <h1 className="page-header">{dayjs().year()} Schedule</h1>
 
-      <section className='card'>
-        <div className='schedule-grid'>
+      <section className="card">
+        <div className="schedule-grid">
           {scheduleData ? (
             scheduleData.map((show, index) => {
               const { ID, Date, Type, City, Location, WebLink } = show;
+              const divClass = dayjs().subtract(1, 'd').isBefore(Date)
+                ? 'event-row event-row-schedule fs-400'
+                : 'event-row event-row-schedule event-row-past fs-400';
               return (
-                <div
-                  href={WebLink}
-                  id={ID}
-                  key={index}
-                  className='event-row event-row-schedule fs-400'
-                >
+                <div href={WebLink} id={ID} key={index} className={divClass}>
                   <p>{formatDate(Date)}</p>
                   <p>{Type}</p>
                   <p>{City}</p>
