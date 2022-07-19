@@ -17,7 +17,7 @@ function News({ newsData }) {
             newsData.map((news, index) => {
               const { Title, PostDate, Body } = news;
               return (
-                <div key={index} className="news-item m-1">
+                <div key={index} className="news-item">
                   <h3 className="news-title">{Title}</h3>
                   <h4>{formatDate(PostDate)}</h4>
                   <p>{Body}</p>

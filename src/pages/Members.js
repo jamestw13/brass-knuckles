@@ -72,23 +72,28 @@ function About() {
     },
   ];
   return (
-    <div className='page'>
-      <h1 className='page-header'>Members</h1>
+    <div className="page">
+      <h1 className="page-header">Members</h1>
       {members.map((member, index) => {
         return (
           member.status === 'current' && (
             <>
-              <div className='card member-card' key={index}>
-                <h3 className='member-name'>
+              <div className="card member-card" key={index}>
+                <h3 className="member-name">
                   {member.name}
-                  <span className='member-instrument'>{member.instrument}</span>
+                  <span className="member-instrument">{member.instrument}</span>
                 </h3>
-                <img
-                  className='member-image'
-                  src={require(`../assets/member-images/${member.img}.jpg`)}
-                  alt={`photo of ${member.name}`}
-                />
-                <p className='member-bio'>{member.bio}</p>
+                <div className="member-content">
+                  <div className="member-image-container">
+                    <img
+                      className="member-image"
+                      src={require(`../assets/member-images/${member.img}.jpg`)}
+                      alt={`photo of ${member.name}`}
+                    />
+                  </div>
+
+                  <p className="member-bio">{member.bio}</p>
+                </div>
               </div>
             </>
           )

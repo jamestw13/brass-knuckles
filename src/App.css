@@ -510,22 +510,20 @@ brass kn .ff-sans-norm {
 
 /* Member page components */
 
-/* .member-card {
-} */
-
-.member-image {
-  border-radius: var(--br);
-  margin: 0.25em auto;
-  max-width: 95%;
+.member-card {
+  position: relative;
 }
 
 .member-name {
+  /* position: absolute;
+  top: 0.5em;
+  left: 0.5em; */
   display: inline;
   background-color: hsl(var(--clr-dark));
   color: hsl(var(--clr-brand));
   border-radius: var(--br);
-  padding-inline: 0.25rem;
-  margin-inline: 0.25rem;
+  padding-inline: 0.5rem;
+  margin-inline: 0.5rem;
 
   font-size: var(--fs-500);
 }
@@ -539,7 +537,32 @@ brass kn .ff-sans-norm {
   font-size: var(--fs-400);
 }
 
+.member-card .member-content {
+  display: flex;
+  align-items: center;
+}
+
+.member-card:nth-child(even) .member-content {
+  flex-direction: row-reverse;
+}
+
+.member-image-container {
+  width: 40%;
+  padding: 0 1em 1em 1em;
+}
+.member-image {
+  border-radius: var(--br);
+  margin: auto;
+}
+
 .member-bio {
+  width: 60%;
+  border-radius: var(--br);
+  font-size: 1.25em;
+  background-color: hsl(var(--clr-brand) / 0.5);
+  min-height: 50%;
+
+  padding: 1em;
   margin-inline: 1em;
 }
 
